@@ -3,9 +3,9 @@ package Hot100;
 public class ListNode {
     public int val;
     public ListNode next;
-    ListNode(){}
-    ListNode(int val){this.val = val;this.next = null;}
-    ListNode(int val,ListNode next){this.val = val;this.next = next;}
+    public ListNode(){}
+    public ListNode(int val){this.val = val;this.next = null;}
+    public ListNode(int val,ListNode next){this.val = val;this.next = next;}
     public static ListNode create(int[] nums){
         ListNode head = new ListNode(nums[0]);
         ListNode cur = head;
