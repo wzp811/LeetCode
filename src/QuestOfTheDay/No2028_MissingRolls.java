@@ -12,7 +12,7 @@ public class No2028_MissingRolls {
 
     public boolean process(int[] res, int rest, int index, int n) {
         if (index == n && rest == 0) return true;
-        if(rest>6*(n-index)||rest<n-index) return false;
+        if (rest > 6 * (n - index) || rest < n - index) return false;
         if (rest < 0) return false;
         for (int i = 1; i <= Math.min(6, rest); i++) {
             res[index] = i;
