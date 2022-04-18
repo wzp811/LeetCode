@@ -3,6 +3,7 @@ package QuestOfTheDay;
 import java.util.Stack;
 
 public class No385_Deserialize {
+    /*
     public NestedInteger deserializeTest(String s) {
         NestedInteger ans = new NestedInteger();
         NestedInteger left1 = new NestedInteger(123);
@@ -52,4 +53,6 @@ public class No385_Deserialize {
         }
         return cur.getList();
     }
+
+     */
 }
