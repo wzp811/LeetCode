@@ -13,13 +13,13 @@ public class No87_RestoreIpAddresses {
     }
 
     public void process(List<String> res, StringBuilder cur, int index, int rest, String s) {
-        if (index == s.length()) {
-            if (rest == 0) {
-                res.add(new String(cur).substring(0, cur.length() - 1));
+        if (index == s.length() || rest == 0) {
+            if (index == s.length() && rest == 0) {
+                res.add(new String(cur.deleteCharAt(cur.length() - 1)));
+                cur.append('.');
             }
             return;
         }
-        StringBuilder tmp = new StringBuilder(cur);
         if (s.charAt(index) == '0') {
             cur.append('0');
             cur.append('.');
@@ -30,21 +30,18 @@ public class No87_RestoreIpAddresses {
         }
         int num = 0;
         int cnt = 0;
-        for (int i = 0; i < 3 && index + i < s.length(); i++) {
+        for (int i = 0; i < 3 && i + index < s.length(); i++) {
             num *= 10;
             num += s.charAt(i + index) - '0';
-            cur.append(s.charAt(index + i));
             cnt++;
-            if (num <= 255 && s.length() - i - index - 1 <= rest * 3 && s.length() - i - index - 1 >= rest) {
+            cur.append(s.charAt(i + index));
+            if (num <= 255) {
                 cur.append('.');
-                process(res, cur, index + i + 1, rest - 1, s);
+                process(res, cur, i + index + 1, rest - 1, s);
                 cur.deleteCharAt(cur.length() - 1);
             }
         }
-        while (cnt > 0) {
-            cnt--;
-            cur.deleteCharAt(cur.length() - 1);
-        }
+        for (int i = 0; i < cnt; i++) cur.deleteCharAt(cur.length() - 1);
     }
 
     public static void main(String[] args) {
