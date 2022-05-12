@@ -45,6 +45,7 @@ public class No115_SequenceReconstruction {
         int[] inDegree = new int[n + 1];
         Set<Integer> dict = new HashSet<>();
         for (List<Integer> seq : seqs) {
+            if (seq.size() > n) return false;
             for (int num : seq) {
                 if (num > n) return false;
                 dict.add(num);
@@ -76,6 +77,6 @@ public class No115_SequenceReconstruction {
                 }
             }
         }
-        return true;
+        return res.size() == n;
     }
 }
