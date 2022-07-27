@@ -1,8 +1,11 @@
+import January_2022.TreeNode;
+
+import java.lang.reflect.Array;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 public class Test{
     public static void main(String []args){
-        String a = new String("1234");
-        String b = "1234";
-        System.out.println(a == b);
+        System.out.println("你好".getBytes().length);
+        Map.Entry
     }
 }
