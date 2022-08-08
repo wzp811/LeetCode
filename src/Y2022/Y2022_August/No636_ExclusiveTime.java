@@ -1,5 +1,7 @@
 package Y2022.Y2022_August;
 
+import LeetCodeContest.Weekly305.LongestIdealString;
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
@@ -47,5 +49,11 @@ public class No636_ExclusiveTime {
             lastTime = curTime;
         }
         return res;
+    }
+
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+        Class a = int.class;
+        int t = (int) a.newInstance();
+        System.out.println(t);
     }
 }
