@@ -1,6 +1,8 @@
 package LeetCodeContest.Weekly305;
 
 import java.util.Arrays;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class LongestIdealString {
     public int longestIdealString(String s, int k) {
@@ -18,4 +20,5 @@ public class LongestIdealString {
         }
         return res;
     }
+
 }
