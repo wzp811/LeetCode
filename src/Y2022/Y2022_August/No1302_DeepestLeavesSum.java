@@ -1,6 +1,6 @@
 package Y2022.Y2022_August;
 
-import Hot100.TreeNode;
+import Period.Hot100.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

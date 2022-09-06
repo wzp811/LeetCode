@@ -1,6 +1,6 @@
 package Y2022.Y2022_September;
 
-import Hot100.TreeNode;
+import Period.Hot100.TreeNode;
 
 public class No687_LongestUnivaluePath {
     int res = 0;

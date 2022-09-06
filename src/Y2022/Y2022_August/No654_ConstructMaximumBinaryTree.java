@@ -1,6 +1,6 @@
 package Y2022.Y2022_August;
 
-import Coding_Interviews.TreeNode;
+import QuestionList.Coding_Interviews.TreeNode;
 
 public class No654_ConstructMaximumBinaryTree {
     public TreeNode constructMaximumBinaryTree(int[] nums) {

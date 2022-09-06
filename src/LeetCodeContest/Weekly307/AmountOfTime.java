@@ -1,6 +1,6 @@
 package LeetCodeContest.Weekly307;
 
-import Coding_Interviews.TreeNode;
+import QuestionList.Coding_Interviews.TreeNode;
 
 import java.util.*;
 

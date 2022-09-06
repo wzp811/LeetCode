@@ -1,6 +1,6 @@
 package Y2022.Y2022_July;
 
-import Coding_Interviews.TreeNode;
+import QuestionList.Coding_Interviews.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
