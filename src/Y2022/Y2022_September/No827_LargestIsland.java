@@ -26,7 +26,8 @@ public class No827_LargestIsland {
                     for (int[] dir : dirs) {
                         int nextI = cur[0] + dir[0];
                         int nextJ = cur[1] + dir[1];
-                        if (nextI < 0 || nextI >= grid.length || nextJ < 0 || nextJ >= grid[0].length || visited[nextI][nextJ] || grid[nextI][nextJ] == 0) continue;
+                        if (nextI < 0 || nextI >= grid.length || nextJ < 0 || nextJ >= grid[0].length || visited[nextI][nextJ] || grid[nextI][nextJ] == 0)
+                            continue;
                         int[] next = new int[]{nextI, nextJ};
                         queue.addLast(next);
                         visited[next[0]][next[1]] = true;
@@ -50,7 +51,8 @@ public class No827_LargestIsland {
                 for (int[] dir : dirs) {
                     int nextI = i + dir[0];
                     int nextJ = j + dir[1];
-                    if (nextI < 0 || nextI >= grid.length || nextJ < 0 || nextJ >= grid[0].length || grid[nextI][nextJ] == 0) continue;
+                    if (nextI < 0 || nextI >= grid.length || nextJ < 0 || nextJ >= grid[0].length || grid[nextI][nextJ] == 0)
+                        continue;
                     index = indexs[nextI][nextJ];
                     if (set.contains(index)) continue;
                     set.add(index);
@@ -61,4 +63,51 @@ public class No827_LargestIsland {
         }
         return Math.max(res + 1, maxArea);
     }
+
+    public static class Example extends Thread {
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            System.out.println("run");
+        }
+    }
+
+    public static List<Long> func(int n) {
+        List<Long> res = new ArrayList<>();
+        long next = 10;
+        int ntmp = 1;
+        long cur = 1;
+        while (ntmp <= n) {
+            res.add(cur++);
+            if (cur == next) {
+                next *= 10;
+                ntmp++;
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        dfs(new StringBuilder(), stack, 1);
+    }
+
+    public static void dfs(StringBuilder res, Deque<Integer> stack, int cur) {
+//        System.out.println(res.toString());
+        if (cur == 7 && stack.isEmpty()) System.out.println(res.toString());
+        while (!stack.isEmpty()) {
+            res.append(String.valueOf(-stack.pollLast()));
+            dfs(res, stack, cur);
+        }
+        for (; cur <= 6; cur++) {
+            stack.addLast(cur);
+            res.append(cur);
+            dfs(res, stack, cur + 1);
+        }
+    }
 }
+

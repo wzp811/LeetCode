@@ -17,6 +17,6 @@ public class Test2_2 {
                 matrix[j][i] = len;
             }
         }
-
+        return 0;
     }
 }
