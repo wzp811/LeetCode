@@ -30,7 +30,7 @@ public class Test1 {
         for (int i = 0; i < list.size(); i++) {
             int[] cur = list.get(i);
             for (int j = cur[1]; j >= cur[0]; j--) {
-                dp[j] = dp[j - cur[0]] + 1;
+                dp[j] = Math.max(dp[j - cur[0]] + 1, dp[j]);
                 res = Math.max(dp[j], res);
             }
         }
